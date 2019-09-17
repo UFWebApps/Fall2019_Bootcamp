@@ -85,4 +85,8 @@ describe('Listing Schema Unit Tests', function() {
       done();
     }
   });
+    
+  after(function(done) {
+    mongoose.connection.close(false, done);
+  });
 });
